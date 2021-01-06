@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-"""Documentation for a square class"""
+"""An empty class Square that defines a square"""
 class Square():
-    pass
+    def __init__(self):
+        return None
