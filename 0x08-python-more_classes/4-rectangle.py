@@ -37,14 +37,19 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Function that calculates the perimeter"""
+        if self.__width == 0 or self.__height == 0:
         return self.__width * self.__height
 
     def perimeter(self):
+        """Function that calculates the perimeter"""
+        if self.__width == 0 or self.__height == 0:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * self.__width + 2 * self.__height
 
     def __str__(self):
+        """Function that prints the rectangle"""
         pixel = ""
         if self.__width == 0 or self.__height == 0:
             return pixel
@@ -56,4 +61,6 @@ class Rectangle:
         return pixel
 
     def __repr__(self):
+        """Function that helps to recreate a new instance of the class"""
+ 
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
