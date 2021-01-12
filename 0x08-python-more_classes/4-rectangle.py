@@ -61,5 +61,4 @@ class Rectangle:
 
     def __repr__(self):
         """Function that helps to recreate a new instance of the class"""
- 
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
