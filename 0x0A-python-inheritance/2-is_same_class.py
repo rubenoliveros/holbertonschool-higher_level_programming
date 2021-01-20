@@ -6,4 +6,7 @@ specified class ; otherwise False.
 
 
 def is_same_class(obj, a_class):
+    """
+    Defines an object and returns its type
+    """
     return (type(obj) == a_class)
