@@ -31,11 +31,11 @@ class Student:
         return new_dict
 
         def reload_from_json(self, json):
-        """
-        Replaces all attributes of the Student instance
-        """
-        for key in json:
-            try:
-                setattr(self, key, json[key])
-            except:
-                pass
+            """
+            Replaces all attributes of the Student instance
+            """
+            for key in json:
+                try:
+                    setattr(self, key, json[key])
+                except:
+                    pass
