@@ -5,6 +5,7 @@ This file contains the Base class
 
 
 import json
+import csv
 
 
 class Base:
@@ -21,21 +22,21 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """returns the JSON string representation of a list of dictionaries"""
+        """Returns the JSON string representation of a list of dictionaries"""
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
-        """returns the list of the JSON string representation json_string"""
+        """Returns the list of the JSON string representation json_string"""
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """writes the JSON string representation of list_objs to a file"""
+        """Writes the JSON string representation of list_objs to a file"""
         filename = cls.__name__ + ".json"
         lo = []
         if list_objs is not None:
@@ -46,7 +47,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """returns an instance with all attributes already set"""
+        """Returns an instance with all attributes already set"""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -69,7 +70,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """serializes a list of Rectangles/Squares in csv"""
+        """Serializes a list of Rectangles/Squares in csv"""
         filename = cls.__name__ + ".csv"
         with open(filename, 'w', newline='') as csvfile:
             csv_writer = csv.writer(csvfile)
@@ -83,7 +84,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """deserializes a list of Rectangles/Squares in csv"""
+        """Deserializes a list of Rectangles/Squares in csv"""
         filename = cls.__name__ + ".csv"
         l = []
         try:
