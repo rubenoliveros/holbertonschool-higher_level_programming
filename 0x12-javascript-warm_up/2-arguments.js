@@ -4,5 +4,5 @@ if (process.argv[3]) {
 } else if (process.argv[2]) {
   console.log('Argument found');
 } else {
-  console.loig('No argument');
+  console.log('No argument');
 }
