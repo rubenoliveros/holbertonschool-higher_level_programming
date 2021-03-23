@@ -5,5 +5,5 @@ if (!process.argv[3]) {
   const unique = (value, index, self) => {
     return self.indexOf(value) === index;
   };
-  console.log(Number(process.argv.filter(unique).sort().reverse()[1]));
+  console.log(process.argv.filter(unique).sort().reverse()[1]);
 }
