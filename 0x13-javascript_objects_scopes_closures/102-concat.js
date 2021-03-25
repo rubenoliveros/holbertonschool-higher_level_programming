@@ -6,4 +6,3 @@ const fs = require('fs');
 const textA = fs.readFileSync(fileA, 'utf8');
 const textB = fs.readFileSync(fileB, 'utf8');
 fs.writeFileSync(fileC, textA + textB);
-console.log(fs.readFileSync(fileC, 'utf8'));
