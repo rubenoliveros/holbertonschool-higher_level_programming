@@ -11,8 +11,6 @@ of hbtn_0e_0_usa where name matches the argument.
   3306
 - You must use format to create the SQL query with the user input
 - Results must be sorted in ascending order by states.id
-- Results must be displayed as they are in the example below
-- Your code should not be executed when imported
 """
 
 import MySQLdb
