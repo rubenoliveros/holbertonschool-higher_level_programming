@@ -7,8 +7,8 @@ request(UrlToGet, function (err, response, body) {
   if (response.statusCode === 200) {
     let WedgeAntillesCount = 0;
     const films = JSON.parse(body).results;
-    for (const i in films) {
-      if (films[i].characters.includes(`https://swapi-api.hbtn.io/api/people/${ID}/`)) {
+    for (const i of films) {
+      if (i.characters.includes(`https://swapi-api.hbtn.io/api/people/${ID}/`)) {
         WedgeAntillesCount++;
       }
     }
