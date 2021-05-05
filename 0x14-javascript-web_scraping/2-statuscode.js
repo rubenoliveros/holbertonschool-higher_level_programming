@@ -1,0 +1,6 @@
+#!/usr/bin/node
+const request = require('request');
+const UrlToGet = process.argv[2];
+request(UrlToGet, function (response) {
+  console.log('code: ', response && response.statusCode);
+});
