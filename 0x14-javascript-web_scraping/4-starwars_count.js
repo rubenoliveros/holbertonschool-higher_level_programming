@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const UrlToGet = process.argv[2];
-const ID = '18';
+const ID = 18;
 request(UrlToGet, function (err, response, body) {
   if (err) throw err;
   if (response.statusCode === 200) {
